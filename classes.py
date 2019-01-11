@@ -18,5 +18,8 @@ class numb:
     
     def minus(self,number_1,number_2):
         print(number_1-number_2)
-    
-        
+
+numbers=numb(5,6)
+numbers.plus()
+
+#from code
