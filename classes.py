@@ -6,6 +6,8 @@ class Animals():
         def __init__(self,name,color):
             self.name=name
             self.color=color
+        def voice(self):
+            print('Animals don\'t speak!')
 
 class Cats(Animals):
     def voice(self):
@@ -14,6 +16,16 @@ class Cats(Animals):
 class Dogs(Animals):
     def voice(self):
         print('gav-gav')
+    def supervoice(self):
+        super().voice()
 
-tom=Cats('Tomas','green')
-tom.voice
+dingo=Dogs('Dingo','black')
+dingo.voice()
+dingo.supervoice()
+print(dingo.name,dingo.color)
+
+#Dogs(1,2).voice()
+#Dogs(1,2).supervoice()
+
+
+
