@@ -1,23 +1,33 @@
 #!/usr/bin/env python3
 
-#version 2.0-make .zip archieve of repo
-import os
-import time
+def show_choice():
+        print('Choose:\t1. Copy\n\t2. Zip\n\t3. Exit.')
 
-#vars
-source='/root/repos'
-target_dir='/root/work/backup/repos/'
-target=target_dir+time.strftime('%d%m%y_%H%M')+'.zip'
-zip_command="zip -qr "+target+" "+source
+def copy():
+    print('Copy done.')
 
-#check if the target folder exists
-#if not os.path.exists(target_dir):
-#    os.makedirs(target)
+def zip():
+    print('zip done.')
 
-os.system('clear')
-print("Wait. Copy in progress...")
+def wrong_choice():
+    print('<<',c,'>> is not a correct answer!')
 
-if os.system(zip_command)==0:
-    print('Copied to '+target)
-else:
-    print('Error!')
+show_choice()
+while True:
+    c=input('what is your choice?')
+    try:
+        c=int(c)
+    except ValueError:
+        print('Not a string!')
+    if c==1:
+        copy()
+        break
+    elif c==2:
+        zip()
+        break
+    elif c==3:
+        print('Good Bye!')
+        break
+    else:
+        wrong_choice()
+
