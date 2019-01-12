@@ -1,25 +1,19 @@
 #!/usr/bin/env python3
 
-#version 2.0-make .zip archieve of repo
+#work with classes
 
-class numb:
-    def __init__(self,number_1,number_2):
-      self.number_1=number_1
-      self.number_2=number_2
-    
-    def mnoz(self,number_1,number_2):
-        print(number_1*number_2)
-        
-    def delen(self,number_1,number_2):
-        print(number_1/number_2)
+class Animals():
+        def __init__(self,name,color):
+            self.name=name
+            self.color=color
 
-    def plus(self,number_1,number_2):
-        print(number_1+number_2)
-    
-    def minus(self,number_1,number_2):
-        print(number_1-number_2)
+class Cats(Animals):
+    def voice(self):
+        print('meouu')
 
-numbers=numb(5,6)
-numbers.plus()
+class Dogs(Animals):
+    def voice(self):
+        print('gav-gav')
 
-#from code
+tom=Cats('Tomas','green')
+tom.voice
