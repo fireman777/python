@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python36
 
-#work with classes
+#work with classes - inheritance
 
 class Animals():
         def __init__(self,name,color):
             self.name=name
             self.color=color
+            print('Hi, my name is {0}'.format(self.name))
         def voice(self):
             print('Animals don\'t speak!')
 
@@ -22,10 +23,5 @@ class Dogs(Animals):
 dingo=Dogs('Dingo','black')
 dingo.voice()
 dingo.supervoice()
-print(dingo.name,dingo.color)
-
-#Dogs(1,2).voice()
-#Dogs(1,2).supervoice()
-
 
 
