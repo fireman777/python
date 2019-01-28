@@ -17,6 +17,6 @@ for line in file:
 file.close()
 
 #open/close file using with and write there from var
-with open("file3.txt", "w") as file3:
-    amount_written=file3.write(file1_content)
+with open("file2.txt", "w") as file2:
+    amount_written=file2.write(file1_content)
     print('written {} letters'.format(amount_written))
