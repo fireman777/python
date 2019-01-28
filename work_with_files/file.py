@@ -1,22 +1,22 @@
 #!/usr/bin/env python36
 
-#open and close file using try/finally and push all content to variable
+#open/close file using try/finally and push all content to variable
 try:
-    f = open("file1.txt")
-    content=f.read()
+    file1 = open("file1.txt")
+    file1_content=file1.read()
 finally:
-    f.close()
+    file1.close()
 
-#open file3.txt and pull there all the symbols from myfile1.txt
-myfile3 = open("file3.txt", "w")
-for i in content:
-    amount_written=myfile3.write(i)
+#read file line by line
+file  = open("file1.txt")
+for line in file:
+    if line in ('\n', '\r\n'):
+        print('<<< EMPTY line >>>')
+    else:
+        print(line, end='')
+file.close()
 
-#add some bytes (symbols) and print their number
-print(myfile3.write('abcdef'))
-myfile3.close()
-
-#print some bytes(symbols) of and close it using with statement
-with open("file1.txt") as f:
-        print(f.read())
-
+#open/close file using with and write there from var
+with open("file3.txt", "w") as file3:
+    amount_written=file3.write(file1_content)
+    print('written {} letters'.format(amount_written))
