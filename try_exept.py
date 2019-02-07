@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 
-#try-except-finally:    finally is executed EVERY TIME (no matter is there an axception or not.
-#try-except-else:       else is executed ONLY WHEN NO EXCEPTION (ELSE RELATES TO EXCEPT).
+#try-except-finally:    finally is executed EVERY TIME (no matter is there an axception or not).
+#try-except-else:       else (RELATES TO EXCEPT) is executed ONLY WHEN NO EXCEPTION.
+#finally is executed everytime, else-only without exception.
 
-#finally ie executed everytime, else-only without exception.
+#try    except  finally
+#True   False   yes    (every time)
+#False  True    yes    (every time)
 
-#try    except  finally (every time)
-#True   False   yes
-#False  True    yes
-
-#try    except  else (when no exeption)
-#True   False   yes
-#False  True    no    
+#try    except  else
+#True   False   yes  (only when no exeption)
+#False  True    no
 
 try:
     print(8/0)
